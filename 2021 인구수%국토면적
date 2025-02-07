@@ -1,0 +1,117 @@
+import csv
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df1 = pd.read_csv("2021~2023_총인구수.csv", encoding="cp949")
+df2 = pd.read_csv('2021~2023_국토면적.csv', encoding='euc-kr')
+
+su_1_2021 = df1[(df1['행정구역'].isin(['서울특별시  (1100000000)']))]
+su_2_2021 = df2[(df2['시군구'].isin(['서울'])) & (df2['년(Annual)'].isin(['2021']))]
+su_1_2021_list = su_1_2021.values.tolist()
+su_2_2021_list = su_2_2021.values.tolist()
+
+bu_1_2021 = df1[(df1['행정구역'].isin(['부산광역시  (2600000000)']))]
+bu_2_2021 = df2[(df2['시군구'].isin(['부산'])) & (df2['년(Annual)'].isin(['2021']))]
+bu_1_2021_list = bu_1_2021.values.tolist()
+bu_2_2021_list = bu_2_2021.values.tolist()
+
+dg_1_2021 = df1[(df1['행정구역'].isin(['대구광역시  (2700000000)']))]
+dg_2_2021 = df2[(df2['시군구'].isin(['대구'])) & (df2['년(Annual)'].isin(['2021']))]
+dg_1_2021_list = dg_1_2021.values.tolist()
+dg_2_2021_list = dg_2_2021.values.tolist()
+
+ic_1_2021 = df1[(df1['행정구역'].isin(['인천광역시  (2800000000)']))]
+ic_2_2021 = df2[(df2['시군구'].isin(['인천'])) & (df2['년(Annual)'].isin(['2021']))]
+ic_1_2021_list = ic_1_2021.values.tolist()
+ic_2_2021_list = ic_2_2021.values.tolist()
+
+gj_1_2021 = df1[(df1['행정구역'].isin(['광주광역시  (2900000000)']))]
+gj_2_2021 = df2[(df2['시군구'].isin(['광주'])) & (df2['년(Annual)'].isin(['2021']))]
+gj_1_2021_list = gj_1_2021.values.tolist()
+gj_2_2021_list = gj_2_2021.values.tolist()
+
+dj_1_2021 = df1[(df1['행정구역'].isin(['대전광역시  (3000000000)']))]
+dj_2_2021 = df2[(df2['시군구'].isin(['대전'])) & (df2['년(Annual)'].isin(['2021']))]
+dj_1_2021_list = dj_1_2021.values.tolist()
+dj_2_2021_list = dj_2_2021.values.tolist()
+
+ws_1_2021 = df1[(df1['행정구역'].isin(['울산광역시  (3100000000)']))]
+ws_2_2021 = df2[(df2['시군구'].isin(['울산'])) & (df2['년(Annual)'].isin(['2021']))]
+ws_1_2021_list = ws_1_2021.values.tolist()
+ws_2_2021_list = ws_2_2021.values.tolist()
+
+sj_1_2021 = df1[(df1['행정구역'].isin(['세종특별자치시  (3600000000)']))]
+sj_2_2021 = df2[(df2['시군구'].isin(['세종특별자치시'])) & (df2['년(Annual)'].isin(['2021']))]
+sj_1_2021_list = sj_1_2021.values.tolist()
+sj_2_2021_list = sj_2_2021.values.tolist()
+
+gg_1_2021 = df1[(df1['행정구역'].isin(['경기도  (4100000000)']))]
+gg_2_2021 = df2[(df2['시군구'].isin(['경기'])) & (df2['년(Annual)'].isin(['2021']))]
+gg_1_2021_list = gg_1_2021.values.tolist()
+gg_2_2021_list = gg_2_2021.values.tolist()
+
+gw_1_2021 = df1[(df1['행정구역'].isin(['강원도  (4200000000)']))]
+gw_2_2021 = df2[(df2['시군구'].isin(['강원'])) & (df2['년(Annual)'].isin(['2021']))]
+gw_1_2021_list = gw_1_2021.values.tolist()
+gw_2_2021_list = gw_2_2021.values.tolist()
+
+cb_1_2021 = df1[(df1['행정구역'].isin(['충청북도  (4300000000)']))]
+cb_2_2021 = df2[(df2['시군구'].isin(['충북'])) & (df2['년(Annual)'].isin(['2021']))]
+cb_1_2021_list = cb_1_2021.values.tolist()
+cb_2_2021_list = cb_2_2021.values.tolist()
+
+cn_1_2021 = df1[(df1['행정구역'].isin(['충청남도  (4400000000)']))]
+cn_2_2021 = df2[(df2['시군구'].isin(['충남'])) & (df2['년(Annual)'].isin(['2021']))]
+cn_1_2021_list = cn_1_2021.values.tolist()
+cn_2_2021_list = cn_2_2021.values.tolist()
+
+jb_1_2021 = df1[(df1['행정구역'].isin(['전라북도  (4500000000)']))]
+jb_2_2021 = df2[(df2['시군구'].isin(['전북'])) & (df2['년(Annual)'].isin(['2021']))]
+jb_1_2021_list = jb_1_2021.values.tolist()
+jb_2_2021_list = jb_2_2021.values.tolist()
+
+jn_1_2021 = df1[(df1['행정구역'].isin(['전라남도  (4600000000)']))]
+jn_2_2021 = df2[(df2['시군구'].isin(['전남'])) & (df2['년(Annual)'].isin(['2021']))]
+jn_1_2021_list = jn_1_2021.values.tolist()
+jn_2_2021_list = jn_2_2021.values.tolist()
+
+gb_1_2021 = df1[(df1['행정구역'].isin(['경상북도  (4700000000)']))]
+gb_2_2021 = df2[(df2['시군구'].isin(['경북'])) & (df2['년(Annual)'].isin(['2021']))]
+gb_1_2021_list = gb_1_2021.values.tolist()
+gb_2_2021_list = gb_2_2021.values.tolist()
+
+gn_1_2021 = df1[(df1['행정구역'].isin(['경상남도  (4800000000)']))]
+gn_2_2021 = df2[(df2['시군구'].isin(['경남'])) & (df2['년(Annual)'].isin(['2021']))]
+gn_1_2021_list = gn_1_2021.values.tolist()
+gn_2_2021_list = gn_2_2021.values.tolist()
+
+jj_1_2021 = df1[(df1['행정구역'].isin(['제주특별자치도  (5000000000)']))]
+jj_2_2021 = df2[(df2['시군구'].isin(['제주'])) & (df2['년(Annual)'].isin(['2021']))]
+jj_1_2021_list = jj_1_2021.values.tolist()
+jj_2_2021_list = jj_2_2021.values.tolist()
+
+seoul = (round(int(su_1_2021_list[0][1].replace(',', '')) / int(su_2_2021_list[0][4]), 3))
+busan = (round(int(bu_1_2021_list[0][1].replace(',', '')) / int(bu_2_2021_list[0][4]), 3))
+daegu = (round(int(dg_1_2021_list[0][1].replace(',', '')) / int(dg_2_2021_list[0][4]), 3))
+incheon = (round(int(ic_1_2021_list[0][1].replace(',', '')) / int(ic_2_2021_list[0][4]), 3))
+gwangju = (round(int(gj_1_2021_list[0][1].replace(',', '')) / int(gj_2_2021_list[0][4]), 3))
+daejeon = (round(int(dj_1_2021_list[0][1].replace(',', '')) / int(dj_2_2021_list[0][4]), 3))
+ulsan = (round(int(ws_1_2021_list[0][1].replace(',', '')) / int(ws_2_2021_list[0][4]), 3))
+sejong = (round(int(sj_1_2021_list[0][1].replace(',', '')) / int(sj_2_2021_list[0][4]), 3))
+gyunggi = (round(int(gg_1_2021_list[0][1].replace(',', '')) / int(gg_2_2021_list[0][4]), 3))
+gangwon = (round(int(gw_1_2021_list[0][1].replace(',', '')) / int(gw_2_2021_list[0][4]), 3))
+chungbuk = (round(int(cb_1_2021_list[0][1].replace(',', '')) / int(cb_2_2021_list[0][4]), 3))
+chungnam = (round(int(cn_1_2021_list[0][1].replace(',', '')) / int(cn_2_2021_list[0][4]), 3))
+jeonbuk = (round(int(jb_1_2021_list[0][1].replace(',', '')) / int(jb_2_2021_list[0][4]), 3))
+jeonnam = (round(int(jn_1_2021_list[0][1].replace(',', '')) / int(jn_2_2021_list[0][4]), 3))
+gyungbuk = (round(int(gb_1_2021_list[0][1].replace(',', '')) / int(gb_2_2021_list[0][4]), 3))
+gyungnam = (round(int(gn_1_2021_list[0][1].replace(',', '')) / int(gn_2_2021_list[0][4]), 3))
+jeju = (round(int(jj_1_2021_list[0][1].replace(',', '')) / int(jj_2_2021_list[0][4]), 3))
+
+x = ['SEO', 'BUS', 'DAE', 'INC', 'GWN', 'DEJ', 'ULS', 'SEJ', 'GG', 'GW', 'CB', 'CN', 'JB', 'JN', 'GB', 'GN', 'JJ']
+y = [seoul, busan, daegu, incheon, gwangju, daejeon, ulsan, sejong, gyunggi, gangwon, chungbuk, chungnam, jeonbuk, jeonnam, gyungbuk, gyungnam, jeju]
+plt.bar(x, y)
+plt.title('Population / Area in 2021')
+plt.xlabel('City')
+plt.ylabel('Population / Area')
+plt.show()
